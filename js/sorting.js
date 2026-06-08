@@ -85,6 +85,10 @@ shuffleButton.addEventListener("click", function() {
 })
 
 let sortButton = document.getElementById("sort-btn");
+
 sortButton.addEventListener("click", () => {
+    const dropdownVal = document.getElementById("select-algo").value;
+    if(dropdownVal == "bubble"){
     bubbleSortAnimated(currentArray);
+    }
 })
