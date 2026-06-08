@@ -1,0 +1,149 @@
+/* === Reset & Global === */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #f0f2f5;
+    --nav-bg: #1e1e2e;
+    --nav-text: #e0e0e0;
+    --accent: #98B4D4;
+    --accent-hover: #8889cc;
+    --bar-color: #98B4D4;
+    --surface: #ffffff;
+    --border: #ddd;
+    --text: #2d2d2
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* === Navbar === */
+#nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-bg);
+    padding: 0 2rem;
+    height: 60px;
+}
+
+.nav-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-hover);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-item {
+    color: var(--nav-text);
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* === Main Layout === */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* === Controls === */
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 10px 28px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+.slider-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+input[type="range"]:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.algo-group{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+#select-algo{
+    padding: 10px 28px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* === Array Container === */
+#big-container {
+    display: flex;
+    justify-content: center;
+}
+
+#array-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 400px;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface);
+    padding: 16px 16px 0 16px;
+}
+
+
+
